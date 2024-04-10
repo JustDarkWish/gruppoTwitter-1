@@ -22,11 +22,17 @@
                     <div class="mb-3">
                       <label for="username" class="form-label">Username</label>
                       <input type="text" class="form-control" id="username" aria-describedby="emailHelp">
-                      <div id="emailHelp" class="form-text"></div>
+                      <p class="text-danger" id="usernameError"></p>
                     </div>
                     <div class="mb-3">
                       <label for="password" class="form-label">Password</label>
-                      <input type="password" class="form-control" id="password">
+                      <div class="form-control d-flex justify-content-between align-items-center">
+                        <input type="password" class="border-0" id="password"></input>
+                        <i class="fa-regular fa-eye" id="showPassword"></i>
+                      </div>
+                      <ul id="listaErrori">
+
+                      </ul>
                     </div>
                     <button type="submit" class="btn btn-primary celestinoTwitter d-block ms-auto">Registrati</button>
                   </form>
