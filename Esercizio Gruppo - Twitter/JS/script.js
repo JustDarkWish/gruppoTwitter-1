@@ -54,7 +54,8 @@ function Utente(username, password) {
 }
 
 function toRegisterBtn() {
-    if (usernameCheck && passwordCheck) {
+    
+    if (usernameCheck() && passwordCheck()) {
         let newUser = new Utente(username.value, password.value)
         newUser.posts = [];
 
