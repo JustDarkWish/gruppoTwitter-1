@@ -14,28 +14,40 @@
 </head>
 
 <body data-bs-theme="light" class="celestinoTwitter">
+
     <div class="container">
+
         <div class="row d-flex justify-content-center align-items-center min-vh-100">
+
             <div class="col-lg-5 bg-white p-5 rounded-3">
+
                 <h1 class="mb-5"><i class="uccellinoCeleste fa-brands fa-twitter"></i> Registrati su Twitter</h1>
-                <form>
+
+                <form id="registerBtn" action="/Esercizio Gruppo - Twitter/pages/post.html">
+
                     <div class="mb-3">
                       <label for="username" class="form-label">Username</label>
                       <input type="text" class="form-control" id="username" aria-describedby="emailHelp">
                       <p class="text-danger" id="usernameError"></p>
                     </div>
+
                     <div class="mb-3">
+
                       <label for="password" class="form-label">Password</label>
+
                       <div class="form-control d-flex justify-content-between align-items-center">
                         <input type="password" class="border-0" id="password"></input>
                         <i class="fa-regular fa-eye" id="showPassword"></i>
                       </div>
+
                       <ul id="listaErrori" class="text-danger">
 
                       </ul>
+
                     </div>
-                    <button type="submit" id="registerBtn" class="btn btn-primary celestinoTwitter d-block ms-auto">Registrati</button>
-                  </form>
+                    
+                    <input type="submit" class="btn btn-primary celestinoTwitter d-block ms-auto">Registrati</button>
+                </form>
             </div>
         </div>
     </div>

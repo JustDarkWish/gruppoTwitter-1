@@ -53,9 +53,16 @@ function Utente(username, password) {
     this.password = password;
 }
 
-function registerBtn() {
+function toRegisterBtn() {
     if (usernameCheck && passwordCheck) {
         let newUser = new Utente(username.value, password.value)
         newUser.posts = [];
+
+        localStorage.setItem('login', JSON.stringify(newUser))
+    } else {
+        event.preventDefault();
+        console.log('Validazione fallita');
     }
 }
+
+registerBtn.addEventListener('submit', toRegisterBtn);
