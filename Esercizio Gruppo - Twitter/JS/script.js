@@ -4,10 +4,11 @@ let button = document.querySelector('.btn');
 let usernameError = document.querySelector('#usernameError');
 let listaErrori = document.querySelector('#listaErrori');
 let showPassword = document.querySelector('#showPassword');
+let registerBtn = document.querySelector('#registerBtn');
 
 
 const regexUSERNAME = /^[a-zA-Z0-9]{4,15}$/;
-const regexPASSWORD = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}/;
+const regexPASSWORD = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
 function usernameCheck() {
     if (username.value.match(regexUSERNAME)) {
@@ -22,6 +23,7 @@ function usernameCheck() {
 
 function passwordCheck() {
     if (password.value.match(regexPASSWORD)) {
+        listaErrori.textContent = ''
         return true;
     } else {
         listaErrori.innerHTML = `<li>La tua password deve contenere almeno:</li>
@@ -35,6 +37,8 @@ function passwordCheck() {
 
 username.addEventListener('keyup', usernameCheck);
 
+password.addEventListener('keyup', passwordCheck);
+
 function toShowPassword() {
     if (password.type === 'text') {
         password.type = 'password'
@@ -43,3 +47,15 @@ function toShowPassword() {
     }
 }
 showPassword.addEventListener('click', toShowPassword);
+
+function Utente(username, password) {
+    this.username = username;
+    this.password = password;
+}
+
+function registerBtn() {
+    if (usernameCheck && passwordCheck) {
+        let newUser = new Utente(username.value, password.value)
+        newUser.posts = [];
+    }
+}
