@@ -26,4 +26,3 @@ textAreaDiv.addEventListener('submit', e => {
     postsContainer.innerHTML += `<div class="coloreBgTweet mt-5 py-4 border d-flex flex-wrap"><p class="p-4">${post}</p>
 </div>`
 })
-
