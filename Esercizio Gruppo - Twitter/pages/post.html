@@ -22,13 +22,14 @@
 
             <div class="col-lg-5 bg-white p-5 rounded-3">
 
-                <div id="logoutBtn" class="mb-5 d-flex justify-content-end align-items-center gap-3"> 
+                <div class="mb-5 d-flex justify-content-end align-items-center gap-3">
 
-                    <div id="nicknameAndIcon">
-                        
+                    <div id="nicknameAndIcon" class="d-flex align-items-center gap-2">
+                        <img src="../img/60111.jpg" class="profilePic" alt="default profile picture">
+                        <p class="noMargin">@<span id="userNicknameSpan"></span> </p>
                     </div>
 
-                    <form action="/Esercizio Gruppo - Twitter/index.html">
+                    <form action="/Esercizio Gruppo - Twitter/index.html" id="logoutFunction">
 
                         <input type="submit" class="btn btn-outline-danger" value="Logout"></input>
 
@@ -41,8 +42,10 @@
                 <form action="">
 
                     <label class="form-label" for="">Scrivi il tuo Tweet (max. 50 caratteri)</label>
-                    <textarea class="form-control" name="" id="" cols="30" rows="5"></textarea>
+                    <textarea class="form-control" name="" id="textArea1" cols="30" rows="5"></textarea>
+
                     <p class="fontSizeP mb-4">Hai a disposizione <span id="remainingChar">50</span> caratter<span>i</span>.</p>
+
                     <input type="submit" class="btn btn-primary celestinoTwitter d-block ms-auto" value="Invia Tweet"></input>
                 </form>
 
