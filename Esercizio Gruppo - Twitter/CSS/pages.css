@@ -11,3 +11,12 @@
     justify-content: center;
     background-color: rgb(87, 81, 81);
 }
+
+.fontSizeP {
+    font-size: 13px;
+}
+
+.coloreBgTweet {
+    
+    background-color: #f6f6f6 !important;
+}
