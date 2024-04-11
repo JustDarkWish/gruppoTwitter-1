@@ -21,6 +21,7 @@ textArea1.addEventListener("input", (e) => {
   }
 });
 
+<<<<<<< HEAD
 textAreaDiv.addEventListener("submit", (e) => {
   e.preventDefault();
   let post = textArea1.value;
@@ -28,3 +29,12 @@ textAreaDiv.addEventListener("submit", (e) => {
   postsContainer.innerHTML += `<div class="coloreBgTweet mt-5 py-4 px-2 border text-break "><p>${post}</p>
 </div>`;
 });
+=======
+textAreaDiv.addEventListener('submit', e => {
+    e.preventDefault();
+    let post = textArea1.value;
+
+    postsContainer.innerHTML += `<div class="coloreBgTweet mt-5 py-4 border"><p>${post}</p>
+</div>`
+})
+>>>>>>> a79da19c4aa2d9266c1fceca7d81bbca0dd39672

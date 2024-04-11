@@ -30,7 +30,7 @@ function passwordCheck() {
                                  <li>Almeno un carattere in maiuscolo</li>
                                  <li>Almeno un carattere in minuscolo</li>
                                  <li>Almeno un numero</li>
-                                 <li>Almeno un carattere speciale</li>
+                                 <li>Almeno un carattere speciale (!,?,@)</li>
                                  `
     }
 }
