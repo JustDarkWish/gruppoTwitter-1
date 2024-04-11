@@ -23,6 +23,6 @@ textAreaDiv.addEventListener('submit', e => {
     e.preventDefault();
     let post = textArea1.value;
 
-    postsContainer.innerHTML += `<div class="coloreBgTweet mt-5 py-4 border d-flex flex-wrap"><p class="p-4">${post}</p>
+    postsContainer.innerHTML += `<div class="coloreBgTweet mt-5 py-4 border"><p>${post}</p>
 </div>`
 })
