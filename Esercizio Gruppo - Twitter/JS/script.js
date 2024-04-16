@@ -48,16 +48,16 @@ function toShowPassword() {
 }
 showPassword.addEventListener('click', toShowPassword);
 
-function Utente(username, password) {
+function Utente(username, password, posts) {
     this.username = username;
     this.password = password;
+    this.posts = posts;
 }
 
 function toRegisterBtn() {
     
     if (usernameCheck() && passwordCheck()) {
-        let newUser = new Utente(username.value, password.value)
-        newUser.posts = [];
+        let newUser = new Utente(username.value, password.value, [])
 
         localStorage.setItem('login', JSON.stringify(newUser))
     } else {

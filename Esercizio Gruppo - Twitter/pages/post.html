@@ -44,19 +44,21 @@
                     <label class="form-label" for="">Scrivi il tuo Tweet (max. 50 caratteri)</label>
                     <textarea class="form-control" name="" id="textArea1" cols="30" rows="5"></textarea>
 
-                    <p class="fontSizeP mb-4">Hai a disposizione <span id="remainingChar">50</span> caratter<span>i</span>.</p>
+                    <p class="fontSizeP mb-4">Hai a disposizione <span id="remainingChar">50</span> caratter<span id="carattereFinale"></span>.</p>
 
                     <input type="submit" class="btn btn-primary celestinoTwitter d-block ms-auto" value="Invia Tweet"></input>
                 </form>
 
-                <div id="postsContainer">
-                    
+                <div id="postsContainer" class="mt-4">
+                    <div id="tweetDefault" class="coloreBgTweet p-3 border rounded-2 mx-2"><p class="m-0">Scrivi il tuo tweet nella casella qui sopra e postalo qui!</p></div>
                 </div>
 
             </div>
         </div>
     </div>
 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/2.0.0/luxon.min.js"></script>
     <script src="../JS/scriptPostPage.js"></script>
 </body>
 
