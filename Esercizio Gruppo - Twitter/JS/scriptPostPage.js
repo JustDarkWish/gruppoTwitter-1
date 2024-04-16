@@ -6,7 +6,6 @@ let remainingChar = document.querySelector("#remainingChar");
 let textAreaDiv = document.querySelector("#textAreaDiv");
 let postsContainer = document.querySelector("#postsContainer");
 let carattereFinale = document.querySelector('#carattereFinale');
-let d = luxon.DateTime.now();
 let utenteLoggato = JSON.parse(localStorage.getItem("login"));
 let tweetDefault = document.querySelector('#tweetDefault');
 
@@ -18,6 +17,8 @@ function Post(tweet, date) {
 }
 
 function actualDate() {
+
+  let d = luxon.DateTime.now();
 
   let orarioFormattato = d.toFormat("dd-MM-yyyy HH:mm:ss");
 
