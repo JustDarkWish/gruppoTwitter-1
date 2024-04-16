@@ -19,7 +19,7 @@ function Post(tweet, date) {
 
 function actualDate() {
 
-  let orarioFormattato = d.toFormat("dd-MM-yyyy HH:mm");
+  let orarioFormattato = d.toFormat("dd-MM-yyyy HH:mm:ss");
 
   return orarioFormattato;
 
