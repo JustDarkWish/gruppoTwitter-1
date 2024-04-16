@@ -18,9 +18,7 @@ function Post(tweet, date) {
 
 function actualDate() {
 
-  let d = luxon.DateTime.now();
-
-  let orarioFormattato = d.toFormat("dd-MM-yyyy HH:mm:ss");
+  let orarioFormattato = luxon.DateTime.now().toFormat("dd-MM-yyyy HH:mm:ss");
 
   return orarioFormattato;
 
@@ -52,7 +50,7 @@ let newPost
 let i = 0;
 
 textAreaDiv.addEventListener("submit", (e) => {
-  e.preventDefault();
+
   let post = textArea1.value;
 
   tweetDefault.classList.add('d-none');
@@ -66,9 +64,22 @@ utenteLoggato.posts.push(newPost);
 
 localStorage.setItem("login", JSON.stringify(utenteLoggato))
 
-postsContainer.innerHTML += `<div id="${i}" class="coloreBgTweet mt-5 py-4 px-2 border text-break rounded-2"><p>${utenteLoggato.posts[i].date} @${utenteLoggato.username}</p><p>${post}</p>
-</div>`;
+/* pageRefresh(); */
+
 i++
+
 });
 
-console.log(utenteLoggato);
+/*
+ pageRefresh();
+
+function pageRefresh() {
+  if (utenteLoggato.posts.length < 1) {
+    postsContainer.innerHTML = '<div id="tweetDefault" class="coloreBgTweet p-3 border rounded-2 mx-2"><p class="m-0">Scrivi il tuo tweet nella casella qui sopra e postalo qui!</p></div>'
+  } else {
+    utenteLoggato.posts.forEach(element => {
+      postsContainer.innerHTML = `<div id="${i}" class="coloreBgTweet mt-5 py-4 px-2 border text-break rounded-2 mx-2"><p>${element.date} @${utenteLoggato.username}</p><p>${element.tweet}</p>
+      </div>`
+    });
+  }
+} */
