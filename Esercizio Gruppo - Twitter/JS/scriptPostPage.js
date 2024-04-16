@@ -1,85 +1,98 @@
 let userNicknameSpan = document.querySelector("#userNicknameSpan");
 let nicknameAndIcon = document.querySelector("#nicknameAndIcon");
 let textArea1 = document.querySelector("#textArea1");
-let logoutFunction = document.querySelector("#logoutFunction");
+let btnLogout = document.querySelector("#logoutFunction");
 let remainingChar = document.querySelector("#remainingChar");
 let textAreaDiv = document.querySelector("#textAreaDiv");
 let postsContainer = document.querySelector("#postsContainer");
 let carattereFinale = document.querySelector('#carattereFinale');
 let utenteLoggato = JSON.parse(localStorage.getItem("login"));
 let tweetDefault = document.querySelector('#tweetDefault');
+let avatarUser = document.querySelector("#avatar");
+let numberPost = document.querySelector(".number");
+
+const URL_API = "http://localhost:3000/utenti";
+
+
+avatarUser.src = utenteLoggato.avatar;
+
+
 
 function Post(tweet, date) {
 
-  this.tweet = tweet;
-  this.date = date;
+    this.tweet = tweet;
+    this.date = date;
 
 }
 
 function actualDate() {
 
-  let orarioFormattato = luxon.DateTime.now().toFormat("dd-MM-yyyy HH:mm:ss");
+    let orarioFormattato = luxon.DateTime.now().toFormat("dd-MM-yyyy HH:mm:ss");
 
-  return orarioFormattato;
+    return orarioFormattato;
 
 }
 
 userNicknameSpan.textContent = JSON.parse(
-  localStorage.getItem("login")
+    localStorage.getItem("login")
 ).username;
 
 let count = 50;
 
 textArea1.addEventListener("input", (e) => {
-  remainingChar.textContent = count - textArea1.value.length;
+    remainingChar.textContent = count - textArea1.value.length;
+    e.preventDefault();
 
-  if (textArea1.value.length > 50) {
-    textArea1.value = textArea1.value.substr(0, 50);
-    remainingChar.textContent = 0;
-  }
+    if (textArea1.value.length > 50) {
+        textArea1.value = textArea1.value.substr(0, 50);
+        remainingChar.textContent = 0;
+    }
 
-  if (textArea1.value.length == 49) {
-    carattereFinale.textContent = "e";
-  } else {
-    carattereFinale.textContent = "i";
-  }
+    if (textArea1.value.length == 49) {
+        carattereFinale.textContent = "e";
+    } else {
+        carattereFinale.textContent = "i";
+    }
 });
 
-let newPost
+let newPost;
 
 let i = 0;
 
 textAreaDiv.addEventListener("submit", (e) => {
 
-  let post = textArea1.value;
+    e.preventDefault();
+    let post = textArea1.value;
 
-  tweetDefault.classList.add('d-none');
+
+    tweetDefault.classList.add('d-none');
 
 
-textArea1.value = "";
+    textArea1.value = "";
 
-newPost = new Post(post, actualDate());
+    newPost = new Post(post, actualDate());
 
-utenteLoggato.posts.push(newPost);
+    utenteLoggato.posts.push(newPost);
 
-localStorage.setItem("login", JSON.stringify(utenteLoggato))
+    numberPost.innerHTML = utenteLoggato.posts.length;
 
-/* pageRefresh(); */
+    postsContainer.innerHTML += `<div class="coloreBgTweet p-3 border rounded-2 mx-2"><p class="m-0">${utenteLoggato.posts[i].date} @${utenteLoggato.username}</p><p>${utenteLoggato.posts[i].tweet}</p></div>`;
 
-i++
+    localStorage.setItem("login", JSON.stringify(utenteLoggato))
+
+    i++
 
 });
 
-/*
- pageRefresh();
 
-function pageRefresh() {
-  if (utenteLoggato.posts.length < 1) {
-    postsContainer.innerHTML = '<div id="tweetDefault" class="coloreBgTweet p-3 border rounded-2 mx-2"><p class="m-0">Scrivi il tuo tweet nella casella qui sopra e postalo qui!</p></div>'
-  } else {
-    utenteLoggato.posts.forEach(element => {
-      postsContainer.innerHTML = `<div id="${i}" class="coloreBgTweet mt-5 py-4 px-2 border text-break rounded-2 mx-2"><p>${element.date} @${utenteLoggato.username}</p><p>${element.tweet}</p>
-      </div>`
-    });
-  }
-} */
+btnLogout.addEventListener("submit", function () {
+    fetch(URL_API, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(utenteLoggato)
+    })
+    localStorage.clear();
+});
+

@@ -1,5 +1,240 @@
 {
-    "utenti": [
-        
-    ]
-  }
+  "utenti": [
+    {
+      "id": "1167",
+      "username": "ciao3",
+      "password": "ciao3?Lf",
+      "posts": [
+        {
+          "tweet": "ciao",
+          "date": "16-04-2024 17:08:49"
+        },
+        {
+          "tweet": "ciao2",
+          "date": "16-04-2024 17:08:51"
+        }
+      ]
+    },
+    {
+      "id": "28c7",
+      "username": "prova1",
+      "password": "prova1?fffA",
+      "posts": [
+        {
+          "tweet": "ciao1",
+          "date": "16-04-2024 17:16:02"
+        },
+        {
+          "tweet": "ciao2",
+          "date": "16-04-2024 17:16:04"
+        },
+        {
+          "tweet": "ciao3",
+          "date": "16-04-2024 17:16:07"
+        },
+        {
+          "tweet": "ciao4",
+          "date": "16-04-2024 17:16:09"
+        }
+      ]
+    },
+    {
+      "id": "1ba2",
+      "username": "paolo",
+      "password": "paolino2?D",
+      "posts": [
+        {
+          "tweet": "ciao sono paolo",
+          "date": "16-04-2024 17:17:18"
+        },
+        {
+          "tweet": "vivo a londra",
+          "date": "16-04-2024 17:17:22"
+        },
+        {
+          "tweet": "ho fame",
+          "date": "16-04-2024 17:17:26"
+        },
+        {
+          "tweet": "pasta",
+          "date": "16-04-2024 17:17:28"
+        }
+      ]
+    },
+    {
+      "id": "0679",
+      "username": "ciaoo",
+      "password": "drf45?fdA",
+      "posts": [
+        {
+          "tweet": "ciao",
+          "date": "16-04-2024 17:19:17"
+        }
+      ]
+    },
+    {
+      "id": "1956",
+      "username": "ciao",
+      "password": "ciao2LdFFFrrr?",
+      "posts": [
+        {
+          "tweet": "ciao",
+          "date": "16-04-2024 17:28:58"
+        },
+        {
+          "tweet": "ciao2",
+          "date": "16-04-2024 17:29:00"
+        }
+      ],
+      "avatar": "https://source.unsplash.com/300x300?person"
+    },
+    {
+      "id": "1f39",
+      "username": "fffff",
+      "password": "dddddddddddddddddddA23?",
+      "tweets": [
+        {
+          "tweet": "jhhhhhhh",
+          "date": "16:13"
+        },
+        {
+          "tweet": "hbbbbbbb",
+          "date": "16:10"
+        },
+        {
+          "tweet": "ggggg",
+          "date": "16:00"
+        },
+        {
+          "tweet": "fffff",
+          "date": "16:00"
+        },
+        {
+          "tweet": "iutott",
+          "date": "15:59"
+        },
+        {
+          "tweet": "thggg",
+          "date": "15:51"
+        },
+        {
+          "tweet": "tttttttttttttttttttt",
+          "date": "15:51"
+        },
+        {
+          "tweet": "ttttttttttttttt",
+          "date": "15:50"
+        },
+        {
+          "tweet": "cioaaaa",
+          "date": "15:50"
+        },
+        {
+          "tweet": "ciao222",
+          "date": "15:49"
+        },
+        {
+          "tweet": "ciao",
+          "date": "15:49"
+        },
+        {
+          "tweet": "prova",
+          "date": "15:49"
+        },
+        {
+          "tweet": "dddddddddddddddddddddd",
+          "date": "15:49"
+        },
+        {
+          "tweet": "ddddddddddddddddddd",
+          "date": "15:49"
+        },
+        {
+          "tweet": "ddddddddddddd",
+          "date": "15:49"
+        },
+        {
+          "tweet": "fffffffffffffffffffffffff",
+          "date": "15:49"
+        },
+        {
+          "tweet": "fffffffffffffffffff",
+          "date": "15:49"
+        },
+        {
+          "tweet": "fffffffffffffffff",
+          "date": "15:49"
+        }
+      ],
+      "avatar": "https://source.unsplash.com/50x50?avatar"
+    },
+    {
+      "id": "a405",
+      "username": "middd",
+      "password": "mirko33?d?dD",
+      "tweets": [
+        {
+          "tweet": "ciao4",
+          "date": "17:30"
+        },
+        {
+          "tweet": "ciao3",
+          "date": "17:30"
+        },
+        {
+          "tweet": "ciao",
+          "date": "17:30"
+        }
+      ],
+      "avatar": "https://source.unsplash.com/50x50?avatar"
+    },
+    {
+      "id": "4892",
+      "username": "ciao",
+      "password": "cuiao33A33dd?",
+      "posts": [
+        {
+          "tweet": "ciao",
+          "date": "16-04-2024 17:37:19"
+        },
+        {
+          "tweet": "ciao",
+          "date": "16-04-2024 17:37:21"
+        },
+        {
+          "tweet": "ddd",
+          "date": "16-04-2024 17:37:23"
+        },
+        {
+          "tweet": "dd",
+          "date": "16-04-2024 17:37:23"
+        },
+        {
+          "tweet": "ciao",
+          "date": "16-04-2024 17:37:33"
+        },
+        {
+          "tweet": "ciadfff",
+          "date": "16-04-2024 17:37:36"
+        },
+        {
+          "tweet": "dddd",
+          "date": "16-04-2024 17:40:55"
+        },
+        {
+          "tweet": "dddd",
+          "date": "16-04-2024 17:40:57"
+        },
+        {
+          "tweet": "ciao",
+          "date": "16-04-2024 17:41:35"
+        },
+        {
+          "tweet": "ciao",
+          "date": "16-04-2024 17:41:39"
+        }
+      ],
+      "avatar": "https://source.unsplash.com/300x300?person"
+    }
+  ]
+}

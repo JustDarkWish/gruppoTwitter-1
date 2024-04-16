@@ -16,8 +16,10 @@ function usernameCheck() {
         return true;
     } else if (username.value.length < 4) {
         usernameError.textContent = "L'username è inferiore a 4 caratteri";
-    } else {
+    } else if (username.value.length > 15) {
         usernameError.textContent = "L'username è superiore a 15 caratteri";
+    } else {
+        usernameError.textContent = "Non puoi inserire uno spazio";
     }
 }
 
@@ -48,16 +50,19 @@ function toShowPassword() {
 }
 showPassword.addEventListener('click', toShowPassword);
 
-function Utente(username, password, posts) {
+function Utente(username, password, posts, avatar) {
     this.username = username;
     this.password = password;
     this.posts = posts;
+    this.avatar = avatar;
 }
 
+let urlImageUser = "https://source.unsplash.com/300x300?person";
+
 function toRegisterBtn() {
-    
+
     if (usernameCheck() && passwordCheck()) {
-        let newUser = new Utente(username.value, password.value, [])
+        let newUser = new Utente(username.value, password.value, [], urlImageUser);
 
         localStorage.setItem('login', JSON.stringify(newUser))
     } else {
